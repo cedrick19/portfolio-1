@@ -1,16 +1,18 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
+import Layout from "./layout";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { ThemeProvider } from "next-themes";
 
-import Layout from './layout'
-import { QueryClient, QueryClientProvider } from 'react-query'
-
-const queryClient = new QueryClient()
+const queryClient = new QueryClient();
 
 export default function App({ Component, pageProps }) {
   return (
     <QueryClientProvider client={queryClient}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <ThemeProvider enableSystem={true} attribute="class">
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ThemeProvider>
     </QueryClientProvider>
-  )
+  );
 }

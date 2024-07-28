@@ -1,9 +1,13 @@
-import Link from 'next/link';
+import Link from "next/link";
 const Download = ({ icon }) => {
   return (
     <>
-      <Link href='/osamajavaid-resume.pdf' target='_blank' className='flex flex-row text-LightGray items-center gap-x-4 pb-14 pt-4'>
-        <span className='text-Snow'>Download Resume</span>
+      <Link
+        href="https://drive.google.com/file/d/1irJ-oNLXdKWTz1zPz4IzAV6HFE-sp84I/view?usp=sharing"
+        target="_blank"
+        className="flex flex-row dark:text-LightGray items-center gap-x-4 pb-14 pt-4"
+      >
+        <span className="dark:text-Snow">Download Resume</span>
         <span>{icon}</span>
       </Link>
     </>

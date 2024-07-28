@@ -16,7 +16,7 @@ export default function Switcher() {
   const currentTheme = theme === "system" ? systemTheme : theme;
 
   return (
-    <div className="items-center  justify-center text-2xl absolute bottom-0 w-full">
+    <div className="items-center  justify-center absolute bottom-0 w-full mx-12 lg:mx-0">
       <div>
         <div className="p-2 rounded-xl">
           {currentTheme === "dark" ? (
@@ -25,14 +25,14 @@ export default function Switcher() {
               onClick={() => setTheme("light")}
             >
               {" "}
-              <Image src={Sun} alt="logo" className="w-20 h-20 " />
+              <Image src={Sun} alt="logo" className="w-20 h-15 " />
             </button>
           ) : (
             <button
               className="bg-gray-100 p-2 rounded-xl"
               onClick={() => setTheme("dark")}
             >
-              <Image src={Moon} alt="logo" className="w-20 h-20 " />
+              <Image src={Moon} alt="logo" className="w-20 h-15 " />
             </button>
           )}
         </div>

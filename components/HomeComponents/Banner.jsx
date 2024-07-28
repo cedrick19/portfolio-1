@@ -85,9 +85,7 @@ const Banner = () => {
           </div>
 
           <div className="flex items-center gap-x-1">
-            <span className="text-base md:text-lg text-Green font-bold">
-              8+
-            </span>
+            <span className="text-base md:text-lg text-Green font-bold"></span>
             <span className="text-xs dark:text-Snow">Freelance Clients</span>
           </div>
 

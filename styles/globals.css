@@ -17,6 +17,10 @@ body {
   color: #9e8e8e !important; /* Dark mode text color */
   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
+body.light {
+  background-color: #fff; /* Light mode background */
+  color: #000; /* Light mode text color */
+}
 
 @layer components {
   .transition {
@@ -315,4 +319,23 @@ body {
   to {
     transform: translateX(200%);
   }
+}
+
+.main {
+  height: 200vh;
+  background-color: white;
+}
+
+.cursor {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  pointer-events: none;
+  background-color: black;
+  z-index: 70;
+}
+
+.dark .cursor {
+  background-color: white;
 }

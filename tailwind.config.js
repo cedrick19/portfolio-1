@@ -27,6 +27,12 @@ module.exports = {
         "circular-medium": ["circular-medium", "sans-serif"],
         "circular-bold": ["circular-bold", "sans-serif"],
       },
+      zIndex: {
+        60: "60",
+        70: "70",
+        80: "80",
+        100: "100",
+      },
     },
   },
 };

@@ -8,7 +8,7 @@ import {
   animate,
 } from "framer-motion";
 
-export default function index({ stickyElement }) {
+export default function Index({ stickyElement }) {
   const [isHovered, setIsHovered] = useState(false);
   const cursor = useRef(null);
   const cursorSize = isHovered ? 60 : 15;
@@ -59,11 +59,11 @@ export default function index({ stickyElement }) {
     }
   };
 
-  const manageMouseOver = (e) => {
+  const manageMouseOver = () => {
     setIsHovered(true);
   };
 
-  const manageMouseLeave = (e) => {
+  const manageMouseLeave = () => {
     setIsHovered(false);
     animate(
       cursor.current,
@@ -74,13 +74,19 @@ export default function index({ stickyElement }) {
   };
 
   useEffect(() => {
+    const handleMouseMove = (e) => manageMouseMove(e);
+    const handleTouchMove = (e) => manageMouseMove(e.touches[0]);
+
     stickyElement.current.addEventListener("mouseenter", manageMouseOver);
     stickyElement.current.addEventListener("mouseleave", manageMouseLeave);
-    window.addEventListener("mousemove", manageMouseMove);
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("touchmove", handleTouchMove);
+
     return () => {
       stickyElement.current.removeEventListener("mouseenter", manageMouseOver);
       stickyElement.current.removeEventListener("mouseleave", manageMouseLeave);
-      window.removeEventListener("mousemove", manageMouseMove);
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("touchmove", handleTouchMove);
     };
   }, [isHovered]);
 

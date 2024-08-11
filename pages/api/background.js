@@ -52,7 +52,7 @@ const background = [
         role: "Frontend Developer",
         url: "https://dict.gov.ph/",
         desc: "As a frontend developer, I use React, Next & JavaScript to build user interfaces for web applications.",
-        year: "02/2023 - Present",
+        year: "02/2022 - 02/2024",
         location: "C.P Garcia Quezon City, Philippines",
       },
       {

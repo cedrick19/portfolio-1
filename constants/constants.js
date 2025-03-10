@@ -5,7 +5,7 @@ export const DESIGNATION = `MERN Stack Developer | Government Employee | Tech Bl
 export const DETAILS = {
   Residence: "Philippines",
   City: "San Jose Del Monte Bulacan",
-  Age: "25",
+  Age: "26",
 };
 
 export const SKILLS = [

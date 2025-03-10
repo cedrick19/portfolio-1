@@ -20,11 +20,9 @@ const Banner = () => {
                 <div className=" py-4 font-cascadia-normal dark:text-Snow pb-4 text-xs h-20 lg:h-auto">
                   <span>
                     {"<"}
-                    <span className="text-Green sm:text-base xl:text-lg font-bold">
-                      div
-                    </span>
+                    <span className="text-Green text-2xl font-bold">div</span>
                     {">"}{" "}
-                    <span className="dark:text-Snow sm:text-xl xl:text-2xl font-bold">
+                    <span className="dark:text-Snow text-2xl font-bold">
                       {" "}
                       I am a{" "}
                       <span className="inline-block">
@@ -41,9 +39,7 @@ const Banner = () => {
                       </span>
                     </span>{" "}
                     {"</"}
-                    <span className="text-Green sm:text-base xl:text-lg font-bold">
-                      div
-                    </span>
+                    <span className="text-Green text-2xl  font-bold">div</span>
                     {">"}{" "}
                   </span>
                 </div>

@@ -58,7 +58,7 @@ const Nav = ({ setIsOpen, isOpen }) => {
             setIsOpen={setIsOpen}
             NavRoute={"/portfolio"}
             NavIcon={<FiAward />}
-            NavText={"Portfolio"}
+            NavText={"Projects"}
           />
           {isMobile && <Switcher />}
         </div>

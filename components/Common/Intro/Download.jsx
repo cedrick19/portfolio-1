@@ -3,7 +3,7 @@ const Download = ({ icon }) => {
   return (
     <>
       <Link
-        href="https://drive.google.com/file/d/15XJYN_QUoymzlPmqwzd3LedgUDsYpVbH/view?usp=sharing"
+        href="https://drive.google.com/file/d/1BoJ_Kmew_-IOycq-EzeoXJp8N3Qy2T2b/view?usp=sharing"
         target="_blank"
         className="flex flex-row dark:text-LightGray items-center gap-x-4 pb-14 pt-4"
       >

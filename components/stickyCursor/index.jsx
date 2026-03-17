@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 import {
   motion,
   useMotionValue,
@@ -29,12 +29,12 @@ export default function Index({ stickyElement }) {
     y: useSpring(mouse.y, smoothOptions),
   };
 
-  const rotate = (distance) => {
+  const rotate = useCallback((distance) => {
     const angle = Math.atan2(distance.y, distance.x);
     animate(cursor.current, { rotate: `${angle}rad` }, { duration: 0 });
-  };
+  }, []);
 
-  const manageMouseMove = (e) => {
+  const manageMouseMove = useCallback((e) => {
     const { clientX, clientY } = e;
     const { left, top, height, width } =
       stickyElement.current.getBoundingClientRect();
@@ -57,7 +57,7 @@ export default function Index({ stickyElement }) {
       mouse.x.set(clientX - cursorSize / 2);
       mouse.y.set(clientY - cursorSize / 2);
     }
-  };
+  }, [cursorSize, isHovered, mouse.x, mouse.y, rotate, scale.x, scale.y, stickyElement]);
 
   const manageMouseOver = () => {
     setIsHovered(true);
@@ -74,21 +74,26 @@ export default function Index({ stickyElement }) {
   };
 
   useEffect(() => {
+    const element = stickyElement.current;
+    if (!element) {
+      return undefined;
+    }
+
     const handleMouseMove = (e) => manageMouseMove(e);
     const handleTouchMove = (e) => manageMouseMove(e.touches[0]);
 
-    stickyElement.current.addEventListener("mouseenter", manageMouseOver);
-    stickyElement.current.addEventListener("mouseleave", manageMouseLeave);
+    element.addEventListener("mouseenter", manageMouseOver);
+    element.addEventListener("mouseleave", manageMouseLeave);
     window.addEventListener("mousemove", handleMouseMove);
     window.addEventListener("touchmove", handleTouchMove);
 
     return () => {
-      stickyElement.current.removeEventListener("mouseenter", manageMouseOver);
-      stickyElement.current.removeEventListener("mouseleave", manageMouseLeave);
+      element.removeEventListener("mouseenter", manageMouseOver);
+      element.removeEventListener("mouseleave", manageMouseLeave);
       window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("touchmove", handleTouchMove);
     };
-  }, [isHovered]);
+  }, [manageMouseMove, stickyElement]);
 
   const template = ({ rotate, scaleX, scaleY }) => {
     return `rotate(${rotate}) scaleX(${scaleX}) scaleY(${scaleY})`;

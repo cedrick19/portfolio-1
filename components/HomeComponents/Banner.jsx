@@ -1,9 +1,9 @@
 import Typewriter from "typewriter-effect";
 import BannerLayout from "../Common/BannerLayout";
-import { Link } from "react-scroll";
-import { FaDownload } from "react-icons/fa";
 import airconAnimation from "../../public/images/working.json";
-import Lottie from "lottie-react";
+import dynamic from "next/dynamic";
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 const Banner = () => {
   return (
     <BannerLayout>

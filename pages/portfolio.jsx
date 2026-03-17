@@ -1,15 +1,13 @@
-import { useState } from "react";
 import { useQuery } from "react-query";
 import BannerLayout from "../components/Common/BannerLayout";
 import Footer from "../components/Footer";
 import PortfolioCard from "../components/Portfolio/PortfolioCard";
 import axios from "axios";
-import { Skeleton } from "antd";
 import ImageAndParagraphSkeleton from "../components/Common/ImageAndParagraphSkeleton";
 
 const Portfolio = () => {
 
-    const { isLoading, error, data } = useQuery('portfolio', () =>
+    const { isLoading, data } = useQuery('portfolio', () =>
         axios.get('api/portfolio')
             .then(({ data }) => data)
             .catch(error => console.error('Error fetching testimonials:', error)))
@@ -19,12 +17,12 @@ const Portfolio = () => {
 
                 {
                     isLoading ?
-                        [1, 2, 3, 4].map(() => (
-                            <ImageAndParagraphSkeleton className={"w-full object-cover"} />
+                        [1, 2, 3, 4].map((item) => (
+                            <ImageAndParagraphSkeleton key={`portfolio-skeleton-${item}`} className={"w-full object-cover"} />
                         ))
                         :
-                        data?.map((data, key) => (
-                            <PortfolioCard key={key} data={data} />
+                        data?.map((portfolioItem) => (
+                            <PortfolioCard key={portfolioItem.id} data={portfolioItem} />
                         ))
 
                 }

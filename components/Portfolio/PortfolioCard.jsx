@@ -1,11 +1,14 @@
 import Badge from "../Common/Badge";
+import Image from "next/image";
 
 const PortfolioCard = ({ data }) => {
   return (
     <div className="dark:card_stylings overflow-hidden h-full">
-      <img
-        src={data?.image}
-        alt="portfolio img"
+      <Image
+        src={`/${data?.image}`}
+        alt={`${data?.projectName} preview`}
+        width={800}
+        height={360}
         className="w-full object-cover  h-32 sm:h-48 md:h-64"
       />
       <div
@@ -43,8 +46,11 @@ const PortfolioCard = ({ data }) => {
           {data?.projectDetail}
         </p>
         <div className="text-sm flex flex-wrap gap-3 py-2">
-          {data.technologiesUsed.map((index, key) => (
-            <Badge key={key} title={index.tech} />
+          {data.technologiesUsed.map((technology, index) => (
+            <Badge
+              key={`${data.id}-${technology.tech}-${index}`}
+              title={technology.tech}
+            />
           ))}
         </div>
       </div>

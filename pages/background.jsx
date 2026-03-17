@@ -1,15 +1,13 @@
-import { useState } from "react";
 import Edu_Card from "../components/Background/Edu_Card";
 import Exp_Card from "../components/Background/Exp_Card";
 import BannerLayout from "../components/Common/BannerLayout";
 import Footer from "../components/Footer";
 import { useQuery } from "react-query";
 import axios from "axios";
-import { Skeleton } from "antd";
 import ParagraphSkeleton from "../components/Common/ParagraphSkeleton";
 
 function Background() {
-  const { isLoading, error, data } = useQuery("background", () =>
+  const { isLoading, data } = useQuery("background", () =>
     axios
       .get("api/background")
       .then(({ data }) => data)
@@ -24,12 +22,15 @@ function Background() {
             Education & Certifications
           </div>
           {isLoading
-            ? [1, 2, 3].map(() => (
-                <ParagraphSkeleton className={"p-8 h-full w-full relative"} />
+            ? [1, 2, 3].map((item) => (
+                <ParagraphSkeleton
+                  key={`education-skeleton-${item}`}
+                  className={"p-8 h-full w-full relative"}
+                />
               ))
             : data &&
-              data[0]?.eduCards?.map((data, key) => (
-                <Edu_Card key={key} data={data} />
+              data[0]?.eduCards?.map((card) => (
+                <Edu_Card key={card.id} data={card} />
               ))}
         </div>
         <div className="order-1 md:order-2">
@@ -39,12 +40,15 @@ function Background() {
             </div>
 
             {isLoading
-              ? [1, 2, 3].map(() => (
-                  <ParagraphSkeleton className={"p-8 h-full w-full relative"} />
+              ? [1, 2, 3].map((item) => (
+                  <ParagraphSkeleton
+                    key={`experience-skeleton-${item}`}
+                    className={"p-8 h-full w-full relative"}
+                  />
                 ))
               : data &&
-                data[1]?.expCards?.map((data, key) => (
-                  <Exp_Card key={key} data={data} />
+                data[1]?.expCards?.map((card) => (
+                  <Exp_Card key={card.id} data={card} />
                 ))}
           </div>
         </div>

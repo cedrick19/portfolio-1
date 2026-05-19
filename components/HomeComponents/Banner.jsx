@@ -48,7 +48,7 @@ const Banner = () => {
                 className="btn-29 dark:bg-Snow bg-DeepNightBlack"
                 onClick={() =>
                   window.open(
-                    "https://drive.google.com/file/d/1PBuyyfEXTWEULB9I5YMG_jcaTzaBP0W3/view?usp=sharing",
+                    "https://drive.google.com/file/d/1wXivtI4AaXQ8FwFYrPLct9ytpj8VrF1p/view?usp=sharing",
                     "_blank"
                   )
                 }

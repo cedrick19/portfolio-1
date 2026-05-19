@@ -13,7 +13,7 @@ const Banner = () => {
             <div className="">
               <div className="">
                 <h1 className="text-3xl sm:text-4xl xl:text-5xl dark:text-Snow font-bold">
-                  Hello, Check This Out!
+                  Ai Automation Developer
                 </h1>
               </div>
               <div className="">
@@ -29,8 +29,10 @@ const Banner = () => {
                         <Typewriter
                           options={{
                             strings: [
-                              "MERN Stack Developer",
-                              "NexJs Developer",
+                              "Finance Innovation Developer",
+                              "Power Platform Builder",
+                              "AI Automation Engineer",
+                              "Azure Solutions Developer",
                             ],
                             autoStart: true,
                             loop: true,
@@ -77,18 +79,22 @@ const Banner = () => {
             <span className="text-base md:text-lg text-Green font-bold">
               5+
             </span>
-            <span className="text-xs dark:text-Snow">Proven Projects</span>
+            <span className="text-xs dark:text-Snow">Projects</span>
           </div>
 
           <div className="flex items-center gap-x-1">
-            <span className="text-base md:text-lg text-Green font-bold"></span>
-            <span className="text-xs dark:text-Snow">Freelance Clients</span>
+            <span className="text-base md:text-lg text-Green font-bold">
+              AI
+            </span>
+            <span className="text-xs dark:text-Snow">Workflow Optimization</span>
           </div>
 
           <div className="flex items-center gap-x-1">
-            <span className="text-base md:text-lg text-Green font-bold"></span>
+            <span className="text-base md:text-lg text-Green font-bold">
+              M365
+            </span>
             <span className="text-xs dark:text-Snow">
-              Professional Web Developer
+              Power Platform & Azure
             </span>
           </div>
         </div>

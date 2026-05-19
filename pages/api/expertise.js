@@ -1,38 +1,38 @@
 const expertise = [
   {
     id: 0,
-    title: "Full Stack Development",
-    desc: "I am a skilled MERN stack developer with extensive experience in building robust web applications using MongoDB, Express.js, React.js, and Node.js. I possess a strong understanding of server-side rendering, API integration, and database management. With my expertise, I can deliver dynamic and efficient web solutions tailored to meet the unique requirements of clients.",
+    title: "Finance Innovation & Automation",
+    desc: "I design and develop secure automation solutions that streamline finance, accounting, and planning workflows. My focus is reducing manual effort, improving operational efficiency, and helping teams make faster decisions through reliable systems and data-driven processes.",
   },
   {
     id: 1,
-    title: "Scrum and Jira",
-    desc: "As a developer, I'm proficient in Jira and Scrum methodologies. I use Jira to simplify project management tasks like task assignment, prioritization, and progress tracking. Scrum has improved my teamwork, utilizing daily stand-ups, sprint planning, and retrospectives. My expertise ensures high-quality software products are delivered promptly.",
+    title: "Microsoft 365 & Power Platform",
+    desc: "I build business applications and automated workflows with Microsoft 365, Power Automate, Power Apps, Power BI, SharePoint, and related enterprise tooling. I turn process gaps into scalable solutions that teams can adopt confidently.",
   },
   {
     id: 2,
-    title: "Designing (UI/UX)",
-    desc: "I am proficient in using design software such as Figma, Adobe XD, and Adobe Illustrator. Through participating in hackathons and freelance work, I have gained practical experience in UI/UX design and graphic design. Designing is my passion, and it has allowed me to continue to develop my creative skills and grow in the field.",
+    title: "AI-driven Solutions",
+    desc: "I explore and apply AI capabilities for intelligent automation, data processing enhancements, workflow optimization, and decision support. My goal is to build practical AI-enabled systems that solve real operational problems.",
   },
   {
     id: 3,
-    title: "Git",
-    desc: "Git is essential for version control and collaboration. Its intuitive interface and features like pull requests and issue tracking simplify the process. Continuous integration ensures up-to-date code. GitHub is vital to my success as a developer.",
+    title: "Cloud-based System Improvements",
+    desc: "I use Microsoft Azure services to support secure, scalable applications and automation architecture. I am expanding my cloud engineering expertise with a focus on enterprise-scale financial operations.",
   },
   {
     id: 4,
-    title: "Open Source Contributor",
-    desc: "Open Source is the future. I usually take some time on weekend and contribute into opensource project. It gives me opportunity to learn from best developer's practices and also gives me a chance to help others and contribute into the community for the good.",
+    title: "Governance, Compliance & Reliability",
+    desc: "I help maintain reliable financial applications while supporting compliance, governance, and operational controls. I build with security, maintainability, and business continuity in mind.",
   },
   {
     id: 5,
-    title: "SEO Friendly",
-    desc: "improving your website's visibility on search engine results pages, Optimizing content and HTML on your website. and Ensuring your website is technically sound and accessible to search engines.",
+    title: "Cross-functional Collaboration",
+    desc: "I work closely with Finance, Accounting, and Planning teams to identify inefficiencies, translate business needs into technical solutions, and support adoption through documentation, training, and technical assistance.",
   },
   {
     id: 6,
-    title: "Agile Development",
-    desc: "I am skilled in Agile development methodologies, including iterative development, continuous integration, and continuous delivery. My experience in Agile practices helps in delivering high-quality software solutions efficiently and effectively. I am adept at collaborating with cross-functional teams, ensuring flexibility, and adapting to changing requirements swiftly.",
+    title: "Web Application Development",
+    desc: "My web development background remains part of my toolkit, helping me build user-friendly interfaces, APIs, dashboards, and internal tools that support automation and process improvement initiatives.",
   },
 ];
 

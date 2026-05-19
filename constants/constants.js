@@ -1,6 +1,6 @@
 export const NAME = "Cedrick Christian Gueta";
 
-export const DESIGNATION = `MERN Stack Developer | Government Employee | Tech Blogger`;
+export const DESIGNATION = `Developer - Finance Innovation & Automation | AI-driven Solutions | Power Platform`;
 
 export const DETAILS = {
   Residence: "Philippines",
@@ -10,49 +10,49 @@ export const DETAILS = {
 
 export const SKILLS = [
   {
-    title: "MERN Stack Developer",
-    level: "75%",
+    title: "Finance Automation",
+    level: "90%",
   },
   {
-    title: "React/Nextjs Developer",
-    level: "91%",
-  },
-  // {
-  //   title: 'Desktop Application Developer',
-  //   level: '75%',
-  // },
-  {
-    title: "Backend Developer",
-    level: "54%",
+    title: "Power Platform",
+    level: "88%",
   },
   {
-    title: "Technical Blogger",
-    level: "83%",
+    title: "AI-driven Solutions",
+    level: "82%",
+  },
+  {
+    title: "Cloud Engineering",
+    level: "78%",
   },
 ];
 
 export const TECH_STACK = [
+  "Microsoft 365",
+  "Power Automate",
+  "Power Apps",
+  "Power BI",
+  "Microsoft Azure",
+  "Azure Functions",
+  "SharePoint",
+  "Dataverse",
+  "AI Builder",
+  "Copilot Studio",
+  "Process Automation",
+  "Workflow Optimization",
+  "Data Processing",
+  "Governance",
+  "Compliance",
   "JavaScript",
   "ReactJS",
   "NextJS",
   "TypeScript",
   "NodeJS",
-  "Redux",
-  "Zustand",
-  "CSS",
-  "SCSS",
   "TailwindCSS",
-  "Ant Design",
-  "Material UI",
-  "Next UI",
   "REST API",
-  "MongoDB",
-  "MySQL",
   "Git",
   "GitHub",
   "Jira",
-  "Figma",
-  "Adobe XD",
 ];
 
 export const CONTACTS = {

@@ -1,7 +1,6 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { FaBars, FaMousePointer } from "react-icons/fa";
 import { SlOptionsVertical } from "react-icons/sl";
-import StickyCursor from "../components/stickyCursor";
 import Intro from "../components/Common/Intro";
 import Nav from "../components/Common/Nav/Nav";
 import Switcher from "../components/Switcher";
@@ -9,14 +8,11 @@ import Switcher from "../components/Switcher";
 export default function Layout({ children }) {
   const [isOpen, setIsOpen] = useState(false);
   const [intro, setIntro] = useState(false);
-  const stickyBarsRef = useRef(null);
 
   return (
     <div
       className={`h-screen lg:p-[0.8rem] flex flex-col select-none font-circular`}
     >
-      <StickyCursor stickyElement={stickyBarsRef} />
-
       <div className="lg:hidden">
         <div className="dark:bg-DeepNightBlack dark:text-LightGray w-full h-10 flex items-center justify-between px-2 lg:hidden relative">
           <div
@@ -33,7 +29,6 @@ export default function Layout({ children }) {
           <div
             className="icon flex items-center gap-x-2"
             onClick={(e) => setIsOpen(!isOpen)}
-            ref={stickyBarsRef}
           >
             <span className="icon border-2 text-Green border-Green p-1 text-sm rounded-lg">
               <FaBars />
@@ -68,7 +63,6 @@ export default function Layout({ children }) {
           <div
             onClick={(e) => setIsOpen(!isOpen)}
             className="dark:bg-DeepNightBlack text-Green hidden lg:flex items-center h-16 justify-center text-2xl "
-            ref={stickyBarsRef}
           >
             <span className="icon border-2 border-Green p-2 rounded-xl z-[80]">
               <FaBars />

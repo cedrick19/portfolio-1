@@ -47,11 +47,20 @@ const background = [
   {
     expCards: [
       {
+        id: 0,
+        title: "Concentrix",
+        role: "Developer - Finance Innovation & Automation",
+        url: "https://www.concentrix.com/",
+        desc: "Designing secure, scalable applications and automation solutions for finance operations using Microsoft 365, Power Platform, Power BI, and Microsoft Azure. Collaborates with Finance, Accounting, and Planning teams to improve workflows, reduce manual work, strengthen governance, and support adoption through training and technical support.",
+        year: "Current Role",
+        location: "Philippines",
+      },
+      {
         id: 1,
         title: "Department of Information and Communications Technology",
         role: "Frontend Developer",
         url: "https://dict.gov.ph/",
-        desc: "As a frontend developer, I use React, Next & JavaScript to build user interfaces for web applications.",
+        desc: "Built responsive user interfaces for web applications using React, Next.js, and JavaScript, contributing to public-sector digital services and front-end delivery.",
         year: "02/2022 - 02/2024",
         location: "C.P Garcia Quezon City, Philippines",
       },

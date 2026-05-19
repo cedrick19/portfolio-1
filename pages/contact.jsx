@@ -70,8 +70,10 @@ const Contact = () => {
                 </span>
               </div>
               <div className="flex justify-between items-center">
-                <span className="md:text-base">Freelance</span>
-                <span className="dark:text-LightGray text-sm">Available</span>
+                <span className="md:text-base">Focus</span>
+                <span className="dark:text-LightGray text-sm">
+                  AI, Automation & Cloud
+                </span>
               </div>
             </div>
           </div>

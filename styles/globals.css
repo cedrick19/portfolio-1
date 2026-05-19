@@ -326,21 +326,3 @@ body.light {
   background-color: white;
 }
 
-.cursor {
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  pointer-events: none;
-  background-color: black;
-  z-index: 70;
-}
-
-.dark .cursor {
-  background-color: white;
-}
-@media (max-width: 767px) {
-  .cursor {
-    display: none;
-  }
-}

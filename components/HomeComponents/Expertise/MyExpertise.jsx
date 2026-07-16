@@ -1,15 +1,17 @@
 import ExpertiseCard from "./ExpertiseCard";
-import { useQuery } from "react-query";
+import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import ParagraphSkeleton from "../../Common/ParagraphSkeleton";
 
 const MyExpertise = () => {
-  const { isLoading, error, data } = useQuery("expertise", () =>
-    axios
-      .get("api/expertise")
-      .then(({ data }) => data)
-      .catch((error) => console.error("Error fetching testimonials:", error))
-  );
+  const { isLoading, data } = useQuery({
+    queryKey: ["expertise"],
+    queryFn: () =>
+      axios
+        .get("api/expertise")
+        .then(({ data }) => data)
+        .catch((error) => console.error("Error fetching expertise:", error)),
+  });
 
   return (
     <>

@@ -56,13 +56,15 @@ export const TECH_STACK = [
 ];
 
 export const CONTACTS = {
-  EMAIL: "cedrick.christian16@gmail.com",
+  EMAIL: "cedrickchristiangueta@gmail.com",
   PHONE: "+9615656115",
 };
 export const SOCIAL_LINKS = {
   GITHUB: "https://github.com/cedrick19",
   LINKEDIN: "https://www.linkedin.com/in/cedrick-christian-gueta-740131157/",
-  TWITTER: "https://",
   FACEBOOK: "https://www.facebook.com/cedrick.gueta.56",
   VIBER: "viber://contact?number=%2B639761261370",
 };
+
+export const RESUME_URL =
+  "https://drive.google.com/file/d/1wXivtI4AaXQ8FwFYrPLct9ytpj8VrF1p/view?usp=sharing";

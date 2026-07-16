@@ -1,6 +1,6 @@
 import { AiFillCopyrightCircle } from "react-icons/ai";
 import { MdMail } from "react-icons/md";
-import { AiOutlineWhatsApp } from "react-icons/ai";
+import { CONTACTS, NAME } from "../constants/constants";
 
 const Footer = () => {
   return (
@@ -10,18 +10,22 @@ const Footer = () => {
           <div className="mr-1 text-base">
             <AiFillCopyrightCircle />
           </div>
+          <span>{new Date().getFullYear()}</span>
         </div>
         <div className="flex items-center">
-          <a rel="noreferrer">
+          <span>
             Made with ❤️ by <span className="font-bold">Ced</span>
-          </a>
+          </span>
         </div>
-        <div className="hidden md:flex items-center">
+        <a
+          href={`mailto:${CONTACTS.EMAIL}`}
+          className="hidden md:flex items-center hover:text-Green transition"
+        >
           <div className="mr-1 text-base">
             <MdMail />
           </div>
-          <div className="dark:text-Snow ">Cedrick Christian Gueta</div>
-        </div>
+          <div className="dark:text-Snow ">{NAME}</div>
+        </a>
       </div>
     </div>
   );

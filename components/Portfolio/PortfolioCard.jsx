@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const PortfolioCard = ({ data }) => {
   return (
-    <div className="dark:card_stylings overflow-hidden h-full">
+    <div className="card_stylings overflow-hidden h-full">
       <Image
         src={`/${data?.image}`}
         alt={`${data?.projectName} preview`}
@@ -13,7 +13,7 @@ const PortfolioCard = ({ data }) => {
       />
       <div
         id="arrow"
-        className="py-2 px-6 dark:card_stylings hover:-translate-y-10 transition-all ease-in-out duration-500"
+        className="py-2 px-6 card_stylings hover:-translate-y-10 transition-all ease-in-out duration-500"
       >
         <div className="flex justify-between p-0 m-0 ">
           <h3 className="mr-2 underline italic font-semibold pt-2 text-2xl dark:text-Snow leading-tight sm:leading-normal">

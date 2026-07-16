@@ -34,7 +34,7 @@ const background = [
         year: "2022-2023",
       },
       {
-        id: 3,
+        id: 4,
         title:
           "Explore a Career in IT Support: Learning Fundamentals of IT Support",
         degree: "Learning Fundamentals of IT Support",

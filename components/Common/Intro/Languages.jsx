@@ -2,13 +2,13 @@ import { Progress } from "antd";
 import { useEffect, useState } from "react";
 
 const Languages = () => {
-  const [urdu, setUrdu] = useState(0);
+  const [tagalog, setTagalog] = useState(0);
   const [english, setEnglish] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      if (urdu < 98) {
-        setUrdu((prevCount) => prevCount + 1);
+      if (tagalog < 98) {
+        setTagalog((prevCount) => prevCount + 1);
       }
       if (english < 88) {
         setEnglish((prevCount) => prevCount + 1);
@@ -16,7 +16,7 @@ const Languages = () => {
     }, 30);
 
     return () => clearInterval(timer);
-  }, [urdu, english]);
+  }, [tagalog, english]);
   return (
     <div className="flex flex-col space-y-1 pt-6">
       <div className="flex flex-col gap-y-4">
@@ -26,7 +26,7 @@ const Languages = () => {
             <Progress
               strokeColor="#1fdf64"
               type="circle"
-              percent={urdu}
+              percent={tagalog}
               size={75}
             />
             <span className="text-xs font-bold dark:text-Snow">Tagalog</span>

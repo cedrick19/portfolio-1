@@ -1,21 +1,32 @@
+import Head from "next/head";
 import Edu_Card from "../components/Background/Edu_Card";
 import Exp_Card from "../components/Background/Exp_Card";
 import BannerLayout from "../components/Common/BannerLayout";
 import Footer from "../components/Footer";
-import { useQuery } from "react-query";
+import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import ParagraphSkeleton from "../components/Common/ParagraphSkeleton";
+import { NAME } from "../constants/constants";
 
 function Background() {
-  const { isLoading, data } = useQuery("background", () =>
-    axios
-      .get("api/background")
-      .then(({ data }) => data)
-      .catch((error) => console.error("Error fetching testimonials:", error))
-  );
+  const { isLoading, data } = useQuery({
+    queryKey: ["background"],
+    queryFn: () =>
+      axios
+        .get("api/background")
+        .then(({ data }) => data)
+        .catch((error) => console.error("Error fetching background:", error)),
+  });
 
   return (
     <BannerLayout>
+      <Head>
+        <title>{`Background | ${NAME}`}</title>
+        <meta
+          name="description"
+          content={`Education, certifications, and professional experience of ${NAME}.`}
+        />
+      </Head>
       <div className="grid md:grid-cols-2 md:divide-x-4 md:divide-Green px-4 pb-2 pt-10">
         <div className="flex flex-col gap-y-4 order-2 md:order-1  md:mr-12">
           <div className="mt-10 md:mt-0 text-xl dark:text-Snow font-semibold">

@@ -2,6 +2,7 @@ import Typewriter from "typewriter-effect";
 import BannerLayout from "../Common/BannerLayout";
 import airconAnimation from "../../public/images/working.json";
 import dynamic from "next/dynamic";
+import { RESUME_URL } from "../../constants/constants";
 
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 const Banner = () => {
@@ -48,12 +49,7 @@ const Banner = () => {
               </div>
               <button
                 className="btn-29 dark:bg-Snow bg-DeepNightBlack"
-                onClick={() =>
-                  window.open(
-                    "https://drive.google.com/file/d/1wXivtI4AaXQ8FwFYrPLct9ytpj8VrF1p/view?usp=sharing",
-                    "_blank"
-                  )
-                }
+                onClick={() => window.open(RESUME_URL, "_blank")}
               >
                 <span className="text-container">
                   <span className="dark:text-black text-Snow">

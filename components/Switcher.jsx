@@ -9,6 +9,8 @@ export default function Switcher() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    // next-themes' documented pattern for avoiding hydration mismatch
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
   }, []);
 
@@ -21,18 +23,19 @@ export default function Switcher() {
         <div className="p-2 rounded-xl">
           {currentTheme === "dark" ? (
             <button
-              className="bg-black-700 hover:bg-black "
+              className="bg-black-700 hover:bg-black"
               onClick={() => setTheme("light")}
+              aria-label="Switch to light mode"
             >
-              {" "}
-              <Image src={Sun} alt="logo" className="w-20 h-15 " />
+              <Image src={Sun} alt="" aria-hidden="true" className="w-20 h-16" />
             </button>
           ) : (
             <button
               className="bg-gray-100 p-2 rounded-xl"
               onClick={() => setTheme("dark")}
+              aria-label="Switch to dark mode"
             >
-              <Image src={Moon} alt="logo" className="w-20 h-15 " />
+              <Image src={Moon} alt="" aria-hidden="true" className="w-20 h-16" />
             </button>
           )}
         </div>

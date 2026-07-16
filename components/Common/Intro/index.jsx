@@ -4,7 +4,6 @@ import {
   FaFacebook,
   FaGithub,
   FaLinkedin,
-  FaTwitter,
   FaViber,
 } from "react-icons/fa";
 import Contact from "./Contact";
@@ -15,7 +14,7 @@ import Tools from "./Tools";
 import Skills from "./Skills";
 import Image from "next/image";
 import { NAME, DESIGNATION, SOCIAL_LINKS } from "../../../constants/constants";
-import Osama from "../../../public/images/dp.png";
+import ProfilePicture from "../../../public/images/dp.png";
 
 const Intro = () => {
   return (
@@ -24,8 +23,9 @@ const Intro = () => {
       <div className="header z-50 absolute dark:bg-DeepNightBlack bg-white backdrop-blur-sm inset-y-0 h-48 top-0 flex items-center justify-center w-full flex-col px-4 gap-y-4">
         <Image
           className="w-20 h-20 rounded-full"
-          src={Osama}
-          alt="profile picture"
+          src={ProfilePicture}
+          alt={`${NAME} profile picture`}
+          priority
         />
         <div className="flex flex-col items-center justify-center">
           <span className="dark:text-Snow text-base font-bold break-normal">
@@ -38,7 +38,7 @@ const Intro = () => {
       </div>
 
       {/* middle components */}
-      <div className="beech z-20 flex flex-col overflow-y-scroll pt-48 top-48 space-y-6 divide-y dark:bg-DeepNightBlack bg-white overflow-x-hidden no-scrollbar px-4">
+      <div className="beech z-20 flex flex-col overflow-y-scroll pt-48 top-48 space-y-6 divide-y divide-gray-100 dark:divide-white/10 dark:bg-DeepNightBlack bg-white overflow-x-hidden no-scrollbar px-4">
         <Location />
         <Languages />
         <Skills />
@@ -57,9 +57,6 @@ const Intro = () => {
         >
           <FaGithub />
         </Link>
-        {/* <Link href={SOCIAL_LINKS.TWITTER} target='_blank' rel='noreferrer' className=''>
-          <FaTwitter />
-        </Link> */}
         <Link
           href={SOCIAL_LINKS.FACEBOOK}
           target="_blank"

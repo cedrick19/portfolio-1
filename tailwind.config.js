@@ -33,6 +33,15 @@ module.exports = {
         80: "80",
         100: "100",
       },
+      keyframes: {
+        shimmer: {
+          "0%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" },
+        },
+      },
+      animation: {
+        shimmer: "shimmer 1.8s ease-in-out infinite",
+      },
     },
   },
 };

@@ -8,8 +8,8 @@ const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 const Banner = () => {
   return (
     <BannerLayout>
-      <div className="absolute inset-0  z-20 flex flex-col items-center py-6 justify-center w-full h-full bg-gradient-to-t dark:bg-DeepNightBlack">
-        <div className="bg-LightGray/10 w-[95%] h-[90%] px-4 py-2 rounded-xl overflow-hidden flex md:block">
+      <div className="relative z-20 flex flex-col items-center py-8 md:py-10 justify-center w-full bg-gradient-to-t dark:bg-DeepNightBlack">
+        <div className="bg-LightGray/10 w-[95%] px-4 py-6 md:py-8 rounded-xl flex md:block">
           <div className="flex items-center md:items-center md:justify-around">
             <div className="">
               <div className="">
@@ -18,7 +18,7 @@ const Banner = () => {
                 </h1>
               </div>
               <div className="">
-                <div className=" py-4 font-cascadia-normal dark:text-Snow pb-4 text-xs h-20 lg:h-auto">
+                <div className=" py-4 font-cascadia-normal dark:text-Snow pb-4 text-xs">
                   <span>
                     {"<"}
                     <span className="text-Green text-2xl font-bold">div</span>

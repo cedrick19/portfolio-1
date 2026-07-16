@@ -19,8 +19,8 @@ import ProfilePicture from "../../../public/images/dp.png";
 const Intro = () => {
   return (
     <>
-      {/* fixed at top */}
-      <div className="header z-50 absolute dark:bg-DeepNightBlack bg-white backdrop-blur-sm inset-y-0 h-48 top-0 flex items-center justify-center w-full flex-col px-4 gap-y-4">
+      {/* header */}
+      <div className="header z-50 flex-none dark:bg-DeepNightBlack bg-white backdrop-blur-sm flex items-center justify-center w-full flex-col px-4 py-6 gap-y-4">
         <Image
           className="w-20 h-20 rounded-full"
           src={ProfilePicture}
@@ -37,8 +37,8 @@ const Intro = () => {
         </div>
       </div>
 
-      {/* middle components */}
-      <div className="beech z-20 flex flex-col overflow-y-scroll pt-48 top-48 space-y-6 divide-y divide-gray-100 dark:divide-white/10 dark:bg-DeepNightBlack bg-white overflow-x-hidden no-scrollbar px-4">
+      {/* scrollable middle */}
+      <div className="beech z-20 flex flex-col flex-1 min-h-0 overflow-y-scroll space-y-6 divide-y divide-gray-100 dark:divide-white/10 dark:bg-DeepNightBlack bg-white overflow-x-hidden no-scrollbar px-4">
         <Location />
         <Languages />
         <Skills />
@@ -47,8 +47,8 @@ const Intro = () => {
         <Download icon={<FaDownload />} />
       </div>
 
-      {/* fixed at bottom */}
-      <div className="footer absolute flex justify-center space-x-6 text-xl items-center bottom-0 z-50 h-10 w-full dark:bg-DeepNightBlack bg-white dark:text-Snow">
+      {/* footer */}
+      <div className="footer flex-none flex justify-center space-x-6 text-xl items-center z-50 h-10 w-full dark:bg-DeepNightBlack bg-white dark:text-Snow">
         <Link
           href={SOCIAL_LINKS.GITHUB}
           target="_blank"

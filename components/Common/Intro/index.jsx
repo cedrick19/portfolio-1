@@ -20,20 +20,25 @@ const Intro = () => {
   return (
     <>
       {/* header */}
-      <div className="header z-50 flex-none dark:bg-DeepNightBlack bg-white backdrop-blur-sm flex items-center justify-center w-full flex-col px-4 py-6 gap-y-4">
-        <Image
-          className="w-20 h-20 rounded-full"
-          src={ProfilePicture}
-          alt={`${NAME} profile picture`}
-          priority
-        />
-        <div className="flex flex-col items-center justify-center">
-          <span className="dark:text-Snow text-base font-bold break-normal">
-            {NAME}
-          </span>
-          <span className="text-sm dark:dark:text-Snow text-center mt-2">
-            {DESIGNATION}
-          </span>
+      <div className="header z-50 flex-none card_stylings backdrop-blur-sm flex items-center justify-center w-full flex-col px-6 py-6 gap-y-3 fade-up">
+        <div className="flex items-center gap-4">
+          <Image
+            className="w-20 h-20 rounded-full object-cover"
+            src={ProfilePicture}
+            alt={`${NAME} profile picture`}
+            priority
+          />
+          <div className="flex flex-col items-start">
+            <span className="dark:text-Snow text-xl font-semibold leading-tight">
+              {NAME}
+            </span>
+            <span className="text-gray-600 dark:text-SilverGray text-sm mt-1">
+              {DESIGNATION}
+            </span>
+          </div>
+        </div>
+        <div className="mt-3 w-full flex justify-center gap-3">
+          <Download icon={<FaDownload />} />
         </div>
       </div>
 
@@ -53,7 +58,8 @@ const Intro = () => {
           href={SOCIAL_LINKS.GITHUB}
           target="_blank"
           rel="noreferrer"
-          className=""
+          aria-label={`${NAME} on GitHub`}
+          className="transition-transform duration-200 hover:-translate-y-0.5 hover:text-Green"
         >
           <FaGithub />
         </Link>
@@ -61,7 +67,8 @@ const Intro = () => {
           href={SOCIAL_LINKS.FACEBOOK}
           target="_blank"
           rel="noreferrer"
-          className=""
+          aria-label={`${NAME} on Facebook`}
+          className="transition-transform duration-200 hover:-translate-y-0.5 hover:text-Green"
         >
           <FaFacebook />
         </Link>
@@ -69,7 +76,8 @@ const Intro = () => {
           href={SOCIAL_LINKS.VIBER}
           target="_blank"
           rel="noreferrer"
-          className=""
+          aria-label={`${NAME} on Viber`}
+          className="transition-transform duration-200 hover:-translate-y-0.5 hover:text-Green"
         >
           <FaViber />
         </Link>
@@ -77,7 +85,8 @@ const Intro = () => {
           href={SOCIAL_LINKS.LINKEDIN}
           target="_blank"
           rel="noreferrer"
-          className=""
+          aria-label={`${NAME} on LinkedIn`}
+          className="transition-transform duration-200 hover:-translate-y-0.5 hover:text-Green"
         >
           <FaLinkedin />
         </Link>

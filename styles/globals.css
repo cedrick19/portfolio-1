@@ -1,19 +1,51 @@
+/* Load Inter from Google for a clean, professional type scale */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
 @import "tailwindcss";
 @config "../tailwind.config.js";
 
+:root{
+  --bg: #F8F9FA; /* off-white canvas */
+  --text: #111827; /* charcoal */
+  --accent: #0EA5A4; /* teal */
+  --muted: #6b7280;
+}
+
+html {
+  font-size: 15px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* Consistent, accessible keyboard-focus ring everywhere */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 /* Light mode styles */
 body {
-  background-color: #f3f4f6; /* Soft canvas so panels read as cards */
-  color: #000; /* Light mode text color */
-  overflow: hidden;
-  height: 100vh;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background-color: var(--bg); /* Soft canvas so panels read as cards */
+  color: var(--text); /* Light mode text color */
+  min-height: 100vh;
+  overflow: auto;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
 
 /* Dark mode styles */
 .dark body {
-  background-color: #000 !important; /* Dark mode background */
-  color: #9e8e8e !important; /* Dark mode text color */
+  --bg: #0b1220;
+  --text: #E6EEF7;
+  --accent: #22D3EE;
+  background-color: #05060a !important; /* Dark mode background */
+  color: var(--text) !important; /* Dark mode text color */
   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
 body.light {
@@ -29,7 +61,11 @@ body.light {
     @apply bg-white text-Black shadow-sm shadow-black/5 border border-black/[0.04] rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-Green/10 hover:border-Green/20 hover:bg-gradient-to-br hover:from-Green/5 hover:to-indigo-600/5;
   }
   .button {
-    @apply bg-Green hover:bg-Green/60 transition rounded-xl text-MidNightBlack text-base font-medium px-8 py-2;
+    @apply bg-Green hover:bg-Green/60 transition rounded-xl text-MidNightBlack text-base font-medium px-8 py-2 hover:scale-[1.03] active:scale-[0.98];
+  }
+  /* Gentle hover lift for interactive cards (project grid, etc.) */
+  .hover-lift {
+    @apply transition-transform duration-300 ease-out hover:-translate-y-1;
   }
   .input_stylings {
     @apply bg-gray-100 dark:bg-DeepNightBlack text-Black dark:text-SilverGray text-sm rounded-lg outline-none focus:ring-1 focus:ring-Green block w-full pl-10 p-2.5;
@@ -135,6 +171,15 @@ body.light {
     100% {
       transform: scale(1);
     }
+  }
+
+  /* Fade-up used for small entrance animations */
+  @keyframes fade-up {
+    0% { opacity: 0; transform: translateY(8px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  .fade-up {
+    animation: fade-up 420ms ease both;
   }
 }
 

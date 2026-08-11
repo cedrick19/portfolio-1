@@ -25,7 +25,7 @@ const Portfolio = () => {
                     content={`A selection of projects built by ${NAME}, spanning automation, cloud, and full-stack development.`}
                 />
             </Head>
-            <div className="grid justify items-center grid-flow-row md:grid-cols-2 grid-rows-auto gap-4 px-8 my-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 sm:px-6 md:px-8 py-6 max-w-6xl mx-auto">
 
                 {
                     isLoading ?

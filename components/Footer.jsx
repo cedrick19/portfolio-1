@@ -19,7 +19,8 @@ const Footer = () => {
         </div>
         <a
           href={`mailto:${CONTACTS.EMAIL}`}
-          className="hidden md:flex items-center hover:text-Green transition"
+          aria-label={`Email ${NAME}`}
+          className="hidden md:flex items-center hover:text-Green transition-all duration-200 hover:-translate-y-0.5"
         >
           <div className="mr-1 text-base">
             <MdMail />

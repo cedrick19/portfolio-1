@@ -23,7 +23,7 @@ export default function Switcher() {
         <div className="p-2 rounded-xl">
           {currentTheme === "dark" ? (
             <button
-              className="bg-black-700 hover:bg-black"
+              className="bg-black-700 hover:bg-black transition-transform duration-200 hover:scale-105"
               onClick={() => setTheme("light")}
               aria-label="Switch to light mode"
             >
@@ -31,7 +31,7 @@ export default function Switcher() {
             </button>
           ) : (
             <button
-              className="bg-gray-100 p-2 rounded-xl"
+              className="bg-gray-100 p-2 rounded-xl transition-transform duration-200 hover:scale-105"
               onClick={() => setTheme("dark")}
               aria-label="Switch to dark mode"
             >

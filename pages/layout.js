@@ -17,7 +17,7 @@ export default function Layout({ children }) {
         <div className="bg-white text-Black dark:bg-DeepNightBlack dark:text-LightGray w-full h-10 flex items-center justify-between px-2 lg:hidden relative">
           <button
             type="button"
-            className="icon flex items-center gap-x-2"
+            className="icon flex items-center gap-x-2 transition-transform duration-200 hover:scale-105"
             onClick={() => setIntro(!intro)}
             aria-label={intro ? "Close profile panel" : "Open profile panel"}
             aria-expanded={intro}
@@ -31,7 +31,7 @@ export default function Layout({ children }) {
           </button>
           <button
             type="button"
-            className="icon flex items-center gap-x-2"
+            className="icon flex items-center gap-x-2 transition-transform duration-200 hover:scale-105"
             onClick={() => setIsOpen(!isOpen)}
             aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
             aria-expanded={isOpen}
@@ -59,7 +59,7 @@ export default function Layout({ children }) {
           ></div>
         )}
 
-        <div className="w-full lg:rounded-xl h-auto lg:w-9/12 shadow-lg shadow-black/5 dark:shadow-black/40 bg-white dark:bg-DeepNightBlack relative overflow-auto overflow-x-hidden no-scrollbar">
+        <div className="w-full lg:rounded-xl h-auto lg:w-9/12 shadow-lg shadow-black/5 dark:shadow-black/40 bg-white dark:bg-DeepNightBlack relative overflow-auto overflow-x-hidden no-scrollbar fade-up">
           {children}
         </div>
 

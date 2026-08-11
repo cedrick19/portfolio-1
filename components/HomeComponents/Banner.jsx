@@ -9,7 +9,7 @@ const Banner = () => {
   return (
     <BannerLayout>
       <div className="relative z-20 flex flex-col items-center py-8 md:py-10 justify-center w-full bg-gradient-to-t dark:bg-DeepNightBlack">
-        <div className="bg-LightGray/10 w-[95%] px-4 py-6 md:py-8 rounded-xl flex md:block">
+        <div className="bg-LightGray/10 w-[95%] px-4 py-6 md:py-8 rounded-xl flex md:block fade-up">
           <div className="flex items-center md:items-center md:justify-around">
             <div className="">
               <div className="">

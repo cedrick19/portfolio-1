@@ -67,4 +67,4 @@ export const SOCIAL_LINKS = {
 };
 
 export const RESUME_URL =
-  "https://drive.google.com/file/d/1wXivtI4AaXQ8FwFYrPLct9ytpj8VrF1p/view?usp=sharing";
+  "https://drive.google.com/file/d/1_y-iQOx_56vKn5fwdeCG9iS_nSEZPzdp/view?usp=sharing";
